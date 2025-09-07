@@ -1,20 +1,30 @@
 @keyframes blink-warning {
-	70% {
+	from {
+		color: #d8b26b;
+		background-color: #2e3440;
+	}
+	50% {
 		color: #d8dee9;
+		background-color: #d8b26b;
 	}
 	to {
-		color: #d8dee9;
-		background-color: #ebcb8b;
+		color: #d8b26b;
+		background-color: #2e3440;
 	}
 }
 
 @keyframes blink-critical {
-	70% {
+	from {
+		color: #a34f55;
+		background-color: #2e3440;
+	}
+	50% {
 		color: #d8dee9;
+		background-color: #a34f55;
 	}
 	to {
-		color: #d8dee9;
-		background-color: #bf616a;
+		color: #a34f55;
+		background-color: #2e3440;
 	}
 }
 
