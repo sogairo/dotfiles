@@ -3,6 +3,9 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", "https://github.com/folke/lazy.nvim.git", lazypath })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 require("lazy").setup({
   {

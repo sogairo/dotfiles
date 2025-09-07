@@ -5,7 +5,7 @@
 ^README\.md$
 ^LICENSE$
 ^assets(/|$)
-^.*\.(png|jpe?g|webp|svg)$
+^homebrew(/|$)
+^\.vscode(/|$)
+^bashrc(/|$)
 bashrc(/|$)
-.git(/|$)
-.git(/|$)
