@@ -1,0 +1,11 @@
+^\.git(/|$)
+^\.gitignore$
+^\.stowrc$
+^\.stow-local-ignore$
+^README\.md$
+^LICENSE$
+^assets(/|$)
+^.*\.(png|jpe?g|webp|svg)$
+bashrc(/|$)
+.git(/|$)
+.git(/|$)

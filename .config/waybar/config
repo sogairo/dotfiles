@@ -1,0 +1,155 @@
+{
+	//-- Global Configs --//
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"custom/keyboard-layout"
+	],
+	
+	"modules-center": [
+		"group/center_stack"
+	],
+	
+	"modules-right": [
+		"cpu",
+		"memory",
+		"backlight",
+		"wireplumber",
+		"battery",
+		"bluetooth",
+		"network",
+		"clock#date",
+		"clock#time"
+	],
+
+	//-- Modules --//
+	"group/center_stack": {
+		"orientation": "vertical",
+		"modules": [
+			"hyprland/window",
+			"custom/music"
+		]
+	},
+
+	"hyprland/window": {
+		"format": "{class}",
+		"max-length": 120,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"tooltip": false
+	},
+
+	"battery": {
+		"interval": 2,
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  {capacity}%",
+		"format-full": "{icon}  {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-alt": "{icon} {time}",
+		"format-icons": ["", "", "", "", ""]
+	},
+
+	"clock#time": {
+		"interval": 1,
+		"format": "\u2007{:%H:%M:%S}",
+		"tooltip": false
+	},
+
+	"clock#date": {
+		"interval": 10,
+		"format": " {:%b %d %Y}",
+		"tooltip-format": "{:%A, %B %d %Y}"
+	},
+
+	"cpu": {
+		"interval": 1,
+		"format": "  {usage}%",
+		"tooltip": false,
+		"on-click": "kitty -e btop"
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": "  {}%",
+		"tooltip-format": "{used:.1f}G / {total:.0f}G ({percentage}%)",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"bluetooth": {
+		"format": "{icon}",
+		"format-icons": {
+			"on": "󰂯",
+			"off": "󰂲",
+			"connected": "󰂱"
+		},
+		"on-click": "blueman-manager",
+		"tooltip": false
+	},
+
+	"custom/music": {
+		"return-type": "json",
+		"markup": true,
+		"escape": true,
+		"format": "{icon}{text}",
+		"format-icons": {
+			"playing": "▶ "
+		},
+		"exec": "~/.config/waybar/scripts/center.sh",
+		"tail": true,
+		"interval": 0,
+		"tooltip": false,
+		"max-length": 120,
+		"hide-empty-text": true
+	},
+
+	"network": {
+		"format-wifi": "󰤨",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰤮",
+		"interval": 5,
+		"tooltip-format": "{essid} ({signalStrength}%)\nIP: {ipaddr}",
+		"on-click": "nm-connection-editor"
+	},
+
+	"custom/keyboard-layout": {
+		"return-type": "json",
+		"exec": "~/.config/waybar/scripts/keyboard_layout.sh",
+		"tail": true,
+		"interval": 0,
+		"format": "  {text}",
+		"tooltip": false
+	},
+	
+	"backlight": {
+		"format": "{icon}  {percent}%",
+		"format-icons": ["","󰃜","󰃛","󰃞","󰃝","󰃟","󰃠"],
+		"tooltip": false,
+		"states": {
+			"low": 20,
+			"medium": 50,
+			"high": 80
+		}
+	},
+	
+	"wireplumber": {
+		"format": "{icon}  {volume}%",
+		"format-muted": "  {volume}%",
+		"format-icons": ["", "", ""],
+		"on-click": "pavucontrol",
+		"tooltip": false
+	}
+}
