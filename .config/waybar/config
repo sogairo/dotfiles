@@ -6,6 +6,7 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
+		"custom/ws-sep",
 		"custom/keyboard-layout"
 	],
 	
@@ -45,10 +46,15 @@
 		"tooltip": false
 	},
 
+	"custom/ws-sep": {
+  		"format": " | ",
+		"tooltip": false
+	},
+
 	"battery": {
 		"interval": 2,
 		"states": {
-			"good": 95,
+			"good": 100,
 			"warning": 30,
 			"critical": 15
 		},
@@ -139,8 +145,8 @@
 		"format-icons": ["","󰃜","󰃛","󰃞","󰃝","󰃟","󰃠"],
 		"tooltip": false,
 		"states": {
-			"low": 20,
-			"medium": 50,
+			"low": 0,
+			"medium": 40,
 			"high": 80
 		}
 	},

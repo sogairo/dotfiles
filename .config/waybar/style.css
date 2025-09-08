@@ -171,15 +171,8 @@
 	color: #4c566a;
 }
 
-#custom-keyboard-layout.jp,
-#custom-keyboard-layout.ja,
-#custom-keyboard-layout.japanese {
-	color: #88c0d0;
-}
-
-#custom-keyboard-layout.kana,
 #custom-keyboard-layout.ime {
-	color: #81a1c1;
+	color: #ebcb8b;
 }
 
 #backlight.low {
@@ -187,7 +180,7 @@
 }
 
 #backlight.medium {
-	color: #d8dee9;
+	color: #81a1c1;
 }
 
 #backlight.high {
@@ -229,6 +222,11 @@
 	color: #bf616a;
 	background: transparent;
 	box-shadow: inset 0 -2px 0 #bf616a;
+}
+
+#custom-ws-sep {
+	margin: 0 8px;
+	color: #4c566a;
 }
 
 tooltip {
