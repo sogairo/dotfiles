@@ -110,9 +110,9 @@
 		"return-type": "json",
 		"markup": true,
 		"escape": true,
-		"format": "{icon}{text}",
+		"format": "{icon}   {text}",
 		"format-icons": {
-			"playing": "▶ "
+			"playing": "▶"
 		},
 		"exec": "~/.config/waybar/scripts/center.sh",
 		"tail": true,
