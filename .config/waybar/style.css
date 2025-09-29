@@ -107,6 +107,7 @@
 #battery.charging,
 #battery.plugged {
 	color: #88c0d0;
+	background-color: #2e3440;
 }
 
 #battery.warning.discharging {
